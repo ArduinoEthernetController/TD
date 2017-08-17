@@ -13,7 +13,7 @@ Prefab:
   m_IsPrefabParent: 1
 --- !u!1 &1530995780297066
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -37,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4604107926020146}
   - component: {fileID: 114697891829555690}
-  - component: {fileID: 114146751528975438}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -55,6 +54,21 @@ GameObject:
   - component: {fileID: 4821613399932324}
   m_Layer: 0
   m_Name: PartTORotate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1904405965209014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4940059544464190}
+  m_Layer: 0
+  m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,12 +97,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1530995780297066}
-  m_LocalRotation: {x: 0.5016352, y: 0.49835962, z: -0.501635, w: -0.4983595}
-  m_LocalPosition: {x: -1.8393269, y: 1.4293734, z: -0.0059318542}
-  m_LocalScale: {x: 0.044139665, y: 0.044139672, z: 0.044139676}
+  m_LocalRotation: {x: 0.0000001490116, y: 0.000000059604638, z: -0.7094192, w: -0.70478684}
+  m_LocalPosition: {x: -0.0059316168, y: 0.9053734, z: 1.8393271}
+  m_LocalScale: {x: 0.044139672, y: 0.044139683, z: 0.04413969}
   m_Children: []
-  m_Father: {fileID: 4604107926020146}
-  m_RootOrder: 1
+  m_Father: {fileID: 4821613399932324}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4604107926020146
 Transform:
@@ -101,8 +115,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4826324952863066}
-  - {fileID: 4109649060865986}
   - {fileID: 4821613399932324}
+  - {fileID: 4940059544464190}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -112,13 +126,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1897899264178964}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4109649060865986}
   m_Father: {fileID: 4604107926020146}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4826324952863066
 Transform:
   m_ObjectHideFlags: 1
@@ -131,6 +146,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4604107926020146}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4940059544464190
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904405965209014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.911, y: 1.107, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4604107926020146}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23149272387042742
 MeshRenderer:
@@ -213,17 +241,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1991006912813762}
   m_Mesh: {fileID: 4300000, guid: 7f4f102cc9697554bb17e1dc3c29559c, type: 3}
---- !u!114 &114146751528975438
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1542876974491390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14530af7c0058314585416c1218eb1d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114697891829555690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,6 +252,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b3a0b1e92f60b428d30f80c6b228a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireRate: 1
   range: 12
+  turnSpeed: 10
   enemyTag: Enemy
   partToRotate: {fileID: 4821613399932324}
+  bulletprefab: {fileID: 1295934413377982, guid: ae169327365ff0c44b0815f43e527292,
+    type: 2}
+  firePoint: {fileID: 4940059544464190}
