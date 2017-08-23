@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour {
-
+    [Header("Attributes")]
     public GameObject[] enemyPrefab;
     public Transform spawnPoint;
 
+    [Header("WaveSettings")]
     public float waveDelay = 10f;
-
     private float countdown = 10f;
+    public int [] waveSizes;
 
     public Text waveCountdownText;
     private float currWaveSpeed = .2f;
@@ -51,7 +52,7 @@ public class WaveSpawner : MonoBehaviour {
 
     int CalculateWaveSize()
     {
-        return currWave % 2 > 0 ? 2 : 4;
+        return waveSizes[currWave % waveSizes.Length];
     }
 
     float CalculateSpawnDelay()
