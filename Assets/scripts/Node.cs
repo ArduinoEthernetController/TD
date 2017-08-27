@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class NodeScript : MonoBehaviour {
+public class Node : MonoBehaviour {
     [Header("Attributes")]
     public Color hovercolor;
     public Vector3 offset;
 
-
-    private GameObject turret;
+    [Header("Optional")]
+    public GameObject turret;
 
     private Renderer rend;
     private Color startColor;
     BuildManager buildManager;
 
+    public Vector3 GetBuildPosition()
+        {
+        return transform.position + offset;
+        }
 	// Use this for initialization
 	void Start () {
         rend = GetComponent<Renderer>();
@@ -24,12 +28,10 @@ public class NodeScript : MonoBehaviour {
     void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
-        {
-            
-            return;
-        }
+             return;
+        
 
-        if (buildManager.GetTurretToBuild() == null)
+        if (!buildManager.CanBuild)
             return;
 
         if(turret != null)
@@ -37,8 +39,7 @@ public class NodeScript : MonoBehaviour {
             Debug.Log("Can't build there! ToDo : Display");
             return;
         }
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position+offset, transform.rotation);
+        buildManager.BuildTurretOn(this);
 
         //build a turret
     }
@@ -48,7 +49,7 @@ public class NodeScript : MonoBehaviour {
             return;
 
 
-        if (buildManager.GetTurretToBuild() == null)
+        if (!buildManager.CanBuild)
             return;
 
         rend.material.color = hovercolor;

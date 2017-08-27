@@ -41,4 +41,8 @@ public class Slow : MonoBehaviour
             waypoint = Waypoints.points[++waypointIndex];
         }
     }
+    void OnDestroy()
+    {
+        PlayerStats.Money += 20;
+    }
 }

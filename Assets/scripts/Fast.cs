@@ -40,4 +40,8 @@ public class Fast : MonoBehaviour
             target = Waypoints.points[++waypointIndex];
         }
     }
+    void OnDestroy()
+    {
+        PlayerStats.Money += 10;
+    }
 }
