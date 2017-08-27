@@ -10402,12 +10402,12 @@ Prefab:
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 457
+      value: 559
       objectReference: {fileID: 0}
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -27.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
@@ -10417,7 +10417,7 @@ Prefab:
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 55.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
@@ -12350,7 +12350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTurretPrefab: {fileID: 1542876974491390, guid: 47a68a82b934b1a40b13cb0c82e56076,
     type: 2}
-  anotherTurretPrefab: {fileID: 1542876974491390, guid: 714779746bfbe4c4aa25968371265a9f,
+  anotherTurretPrefab: {fileID: 1322482448128270, guid: 7ec504f940341364e88c1c87b031e2fc,
     type: 2}
 --- !u!114 &1351557679
 MonoBehaviour:
@@ -13611,12 +13611,12 @@ Prefab:
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 357
+      value: 459
       objectReference: {fileID: 0}
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -27.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
@@ -13626,7 +13626,7 @@ Prefab:
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 55.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
@@ -13957,7 +13957,7 @@ MonoBehaviour:
     prefab: {fileID: 1542876974491390, guid: 47a68a82b934b1a40b13cb0c82e56076, type: 2}
     cost: 100
   missleLauncher:
-    prefab: {fileID: 1542876974491390, guid: 714779746bfbe4c4aa25968371265a9f, type: 2}
+    prefab: {fileID: 1322482448128270, guid: 7ec504f940341364e88c1c87b031e2fc, type: 2}
     cost: 250
 --- !u!1 &1544750753
 GameObject:
