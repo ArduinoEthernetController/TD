@@ -28,7 +28,7 @@ public class Fast : MonoBehaviour
         }
 
     }
-
+    //gitignore test
     void SetNextWaypoint()
     {
         if (waypointIndex >= Waypoints.points.Length - 1)
