@@ -10402,7 +10402,7 @@ Prefab:
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 591.5
+      value: 457
       objectReference: {fileID: 0}
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
@@ -10467,7 +10467,7 @@ Prefab:
     - target: {fileID: 114821958336092550, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseAnotherTurret
+      value: SelectMissleLauncher
       objectReference: {fileID: 0}
     - target: {fileID: 114821958336092550, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
@@ -12298,6 +12298,7 @@ GameObject:
   - component: {fileID: 1351557677}
   - component: {fileID: 1351557676}
   - component: {fileID: 1351557678}
+  - component: {fileID: 1351557679}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -12351,6 +12352,18 @@ MonoBehaviour:
     type: 2}
   anotherTurretPrefab: {fileID: 1542876974491390, guid: 714779746bfbe4c4aa25968371265a9f,
     type: 2}
+--- !u!114 &1351557679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1351557675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f496f226b8ef4af4bbbab871852b1866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!4 &1353419469 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4263985737083610, guid: 55b69597363dd4a4fb8fd3bef8fe0495,
@@ -13598,7 +13611,7 @@ Prefab:
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 491.5
+      value: 357
       objectReference: {fileID: 0}
     - target: {fileID: 224246545770501932, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
@@ -13663,7 +13676,7 @@ Prefab:
     - target: {fileID: 114821958336092550, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseStandartTurret
+      value: SelectStandartTurret
       objectReference: {fileID: 0}
     - target: {fileID: 114821958336092550, guid: 5d21ed41dd3367e4ea874969fcef69af,
         type: 2}
@@ -13940,6 +13953,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae02bd4784847d94580bd58d9cfab737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standartTurret:
+    prefab: {fileID: 1542876974491390, guid: 47a68a82b934b1a40b13cb0c82e56076, type: 2}
+    cost: 100
+  missleLauncher:
+    prefab: {fileID: 1542876974491390, guid: 714779746bfbe4c4aa25968371265a9f, type: 2}
+    cost: 250
 --- !u!1 &1544750753
 GameObject:
   m_ObjectHideFlags: 0
