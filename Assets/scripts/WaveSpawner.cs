@@ -69,7 +69,10 @@ public class WaveSpawner : MonoBehaviour {
     void CountdownTick()
     {
         countdown -= Time.deltaTime;
-        waveCountdownText.text = Mathf.Floor(countdown + 1f).ToString();
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+
+        waveCountdownText.text = string.Format("{0:00.00},", countdown);
+            //Mathf.Floor(countdown + 1f).ToString();
     }
 
     

@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Node : MonoBehaviour {
     [Header("Attributes")]
     public Color hovercolor;
+    public Color notEnoughMoneyColor;
     public Vector3 offset;
 
     [Header("Optional")]
@@ -13,6 +14,7 @@ public class Node : MonoBehaviour {
 
     private Renderer rend;
     private Color startColor;
+
     BuildManager buildManager;
 
     public Vector3 GetBuildPosition()
@@ -39,6 +41,8 @@ public class Node : MonoBehaviour {
             Debug.Log("Can't build there! ToDo : Display");
             return;
         }
+
+
         buildManager.BuildTurretOn(this);
 
         //build a turret
@@ -52,7 +56,10 @@ public class Node : MonoBehaviour {
         if (!buildManager.CanBuild)
             return;
 
-        rend.material.color = hovercolor;
+        if (buildManager.HasMoney)
+            rend.material.color = hovercolor;
+        else
+            rend.material.color = notEnoughMoneyColor;
 
     }
     void OnMouseExit()
